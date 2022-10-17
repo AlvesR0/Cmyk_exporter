@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>CMYK pdf exporter</_name>
+  <id>org.inkscape.output.cmyk.pdf</id>
+  <dependency type="extension">org.inkscape.output.svg.inkscape</dependency>
+  <dependency type="executable" location="path">convert</dependency>
+  <dependency type="executable" location="extensions">cmyk_exporter/exporter.py</dependency>
+  <output>
+    <extension>.pdf</extension>
+    <mimetype>application/x-pdf</mimetype>
+    <_filetypename>CMYK pdf(*.pdf)</_filetypename>
+    <_filetypetooltip>PDF encoded with CMYK colorspace(*.pdf)</_filetypetooltip>
+    <dataloss>true</dataloss>
+  </output>
+  <script>
+    <command reldir="extensions" interpreter="python">cmyk_exporter/pdf.py</command>
+    <helper_extension>org.inkscape.output.svg.inkscape</helper_extension>
+  </script>
+</inkscape-extension>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>CMYK jpg exporter</_name>
+  <id>org.inkscape.output.cmyk.jpg</id>
+  <dependency type="extension">org.inkscape.output.svg.inkscape</dependency>
+  <dependency type="executable" location="path">convert</dependency>
+  <dependency type="executable" location="extensions">cmyk_exporter/exporter.py</dependency>
+  <output>
+    <extension>.jpg</extension>
+    <mimetype>application/x-jpg</mimetype>
+    <_filetypename>CMYK jpg(*.jpg)</_filetypename>
+    <_filetypetooltip>JPG encoded with CMYK colorspace(*.jpg)</_filetypetooltip>
+    <dataloss>true</dataloss>
+  </output>
+  <script>
+    <command reldir="extensions" interpreter="python">cmyk_exporter/jpg.py</command>
+    <helper_extension>org.inkscape.output.svg.inkscape</helper_extension>
+  </script>
+</inkscape-extension>

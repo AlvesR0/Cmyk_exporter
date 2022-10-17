@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>CMYK tiff exporter</_name>
+  <id>org.inkscape.output.cmyk.tiff</id>
+  <dependency type="extension">org.inkscape.output.svg.inkscape</dependency>
+  <dependency type="executable" location="path">convert</dependency>
+  <dependency type="executable" location="extensions">cmyk_exporter/exporter.py</dependency>
+  <output>
+    <extension>.tiff</extension>
+    <mimetype>application/x-tiff</mimetype>
+    <_filetypename>CMYK tiff(*.tiff)</_filetypename>
+    <_filetypetooltip>TIFF encoded with CMYK colorspace(*.tiff)</_filetypetooltip>
+    <dataloss>true</dataloss>
+  </output>
+  <script>
+    <command reldir="extensions" interpreter="python">cmyk_exporter/tiff.py</command>
+    <helper_extension>org.inkscape.output.svg.inkscape</helper_extension>
+  </script>
+</inkscape-extension>
